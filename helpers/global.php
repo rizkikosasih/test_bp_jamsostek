@@ -25,27 +25,6 @@ if (!function_exists("tgl_indo")) {
   }
 }
 
-if (!function_exists("bulans")) {
-  function bulans() {
-    global $bulan;
-    return $bulan;
-  }
-}
-
-if (!function_exists("getBulan")) {
-  function getBulan($int) {
-    global $bulan;
-    return $bulan[intval($int)];
-  }
-}
-
-if (!function_exists("rupiah")) {
-  function rupiah($angka) {
-    $hasil_rupiah = "Rp " . number_format($angka, 0, ',', '.');
-    return $hasil_rupiah;
-  }
-}
-
 if (!function_exists("base_url")) {
   function base_url($page = "")
   {
@@ -54,9 +33,17 @@ if (!function_exists("base_url")) {
   }
 }
 
-if (!function_exists("redirect")) {
-  function redirect($urls="", $timeout=0) {
-    echo "<meta http-equiv='refresh' content='$timeout; url=$urls'>";
+if (!function_exists('validate_email')) {
+  function validate_email($email) {
+    // Bersihkan dari karakter ilegal
+    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
+
+    // Validasi format email
+    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
+      return false;
+    }
+
+    return true;
   }
 }
 
@@ -77,20 +64,6 @@ if (!function_exists('xss_clean')) {
     $data = trim($data);
 
     return $data;
-  }
-}
-
-if (!function_exists('validate_email')) {
-  function validate_email($email) {
-    // Bersihkan dari karakter ilegal
-    $email = filter_var($email, FILTER_SANITIZE_EMAIL);
-
-    // Validasi format email
-    if (!filter_var($email, FILTER_VALIDATE_EMAIL)) {
-      return false;
-    }
-
-    return true;
   }
 }
 
