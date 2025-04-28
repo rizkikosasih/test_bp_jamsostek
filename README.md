@@ -1,5 +1,7 @@
 <!-- @format -->
 
-Test BP Jamsostek - CRUD menggunakan PHP Native, MYSQL, HTML, CSS, Javascript.
+<h3>Test BP Jamsostek - CRUD menggunakan PHP Native, MYSQL, HTML, CSS, Javascript.</h3>
 
-Jalankan script "database.sql" untuk mengimport database;
+<p style="text-align: justify;">
+  Untuk menjalankan aplikasi ini silahkan jalankan query "database.sql" dan pastikan memiliki internet karena beberapa library yang digunakan untuk membuat aplikasi ini menggunakan cdn.
+</p>
