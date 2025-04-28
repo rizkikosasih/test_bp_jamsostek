@@ -1,0 +1,7 @@
+/** @format */
+
+label.error {
+  color: red;
+  font-size: medium;
+  margin-top: 6px;
+}
